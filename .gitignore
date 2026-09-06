@@ -1,0 +1,6 @@
+.venv/
+venv/
+__pycache__/
+.DS_Store
+portfolio_state.json
+portfolio_data.json
