@@ -23,7 +23,7 @@ if SAVE_FILE.exists() and not st.session_state.get("loaded"):
         pass
     st.session_state.loaded = True
 
-st.title("📈 Portfolio Tracker")
+st.title("Portfolio Tracker")
 
 text_input = st.text_area(
     "Holdings (TICKER:SHARES:BUY_PRICE)",
@@ -99,19 +99,19 @@ if holdings:
         pnl = total_value - total_invested
         pnl_pct = (pnl / total_invested * 100) if total_invested > 0 else 0.0
 
-        st.subheader("📊 Portfolio Summary")
+        st.subheader("Portfolio Summary")
         c1, c2, c3 = st.columns(3)
         c1.metric("Invested", f"${total_invested:,.2f}")
         c2.metric("Current Value", f"${total_value:,.2f}")
         c3.metric("Unrealized P&L", f"${pnl:,.2f}", f"{pnl_pct:+.2f}%")
 
-        st.subheader("📈 Performance")
+        st.subheader("Performance")
         st.line_chart(ts_df["Total"])
 else:
     st.info("Enter at least one valid holding to display portfolio metrics.")
 
 st.markdown("---")
-st.subheader("📰 Market News")
+st.subheader("Market News")
 
 try:
     feed = feedparser.parse("https://finance.yahoo.com/news/rssindex")
