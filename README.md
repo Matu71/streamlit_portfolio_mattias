@@ -5,7 +5,7 @@ A simple web app I built with Python and Streamlit to track my stock portfolio a
 I created this project to practice working with live data from APIs, handling user inputs, and visualizing time-series data on an interactive dashboard.
 
 ---
-
+ 
 ## Features
 
 * **Live Market Data:** Pulls current stock prices and news using yfinance and feedparser.
